@@ -2,11 +2,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
-
 app.MapPost("/orders", (Order order) =>
 {
     Console.WriteLine("Order received : " + order);
